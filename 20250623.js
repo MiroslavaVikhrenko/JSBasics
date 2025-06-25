@@ -28,5 +28,7 @@ for (const char of word) {
     //     charCount[char] = 1;
     // }
 
-    charCount[char] = (charCount[char]) ? +1 :  1 ;  
+    //charCount[char] = (charCount[char]) ? + 1 :  1 ;  
+    charCount[char] = (counts[char] || 0) + 1;  
 }
+
