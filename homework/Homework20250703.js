@@ -3,12 +3,29 @@ const tags = ["js", "css", "js", "html", "css", "js"];
 // output: { js: 3, css: 2, html: 1 }
 
 const tagCounts = tags.reduce((accum, tag) => {
+  //ver 1
   if (accum[tag]) {
     accum[tag] += 1;
   } else {
     accum[tag] = 1;
   }
-  //   accum[tag] = (accum[tag] || 0) + 1;
+  
+  //ver 2
+  // if (!accum[tag]) {
+  //   accum[tag] = 0
+  // }
+  // accum[tag] += 1
+
+  //ver 3
+  // accum[tag] = accum[tag] || 0
+  // accum[tag] = accum[tag] ? accum[tag] : 0
+  // accum[tag] +=1
+  
+  //ver 4
+  // accum[tag] = (accum[tag] || 0) + 1;
+
+  //ver 5
+  //accum[tag] = accum[tag] ? accum[tag] + 1 : 1;
   return accum;
 }, {});
 
