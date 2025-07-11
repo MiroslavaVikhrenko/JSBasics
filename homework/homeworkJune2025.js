@@ -30,7 +30,7 @@
 
 // TASK 3
 
-const text = "apple banana apple orange papaya apple banana grape";
+// const text = "apple banana apple orange papaya apple banana grape";
 
 // function countWords(str){
 //     const words = str.split(" ");
@@ -82,17 +82,25 @@ const text = "apple banana apple orange papaya apple banana grape";
 
 // TASK 5
 
-function isPrime(num){
-    if (num <=1) return false;
+// function isPrime(num){
+//     if (num <=1) return false;
 
-    for (let i = 2; i < num; i++){
-        if (num % i === 0){
-            return false;
-        }
-    }
+//     for (let i = 2; i < num; i++){
+//         if (num % i === 0){
+//             return false;
+//         }
+//     }
 
-    return true;
-}
+//     return true;
+// }
 
-console.log(isPrime(7));
-console.log(isPrime(12));
+// console.log(isPrime(7));
+// console.log(isPrime(12));
+
+console.log("[] + [] =", [] + []); // ""
+console.log("[] + {} =", [] + {}); // [object Object]
+console.log("{} + [] =", {} + []); // [object Object]
+console.log("typeof NaN =", typeof NaN); // number
+console.log("true + true =", true + true); // 2
+
+

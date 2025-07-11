@@ -1,32 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
-        .strikeThrough {
-            text-decoration: line-through;
-        }
+      /** 
+        *  center entire content
+        *  make input biger and more modern look alongside button. make them round cornered
+        *  Add a header with nice simple background image and add some motivational title  
+        */
+      header {
+        color: navy;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: gainsboro;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      main {
+        width: 100%;
+        background: url("bg.jpg");
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px grey;
+        max-width: 500px;
+      }
+      form {
+        text-align: center;
+      }
+      input {
+        padding: 10px;
+        margin-right: 10px;
+        font-size: larger;
+        border-radius: 20px;
+        background-color: antiquewhite;
+      }
+      button {
+        padding: 5px 5px;
+        margin: 5px 5px;
+        font-size: 10px;
+        border-radius: 10px;
+        background-color: lightblue;
+      }
+      .delete-button {
+        background: none;
+        border: none;
+        color: grey;
+        cursor: pointer;
+        visibility: hidden;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        margin: 8px 0;
+        background-color: rgba(255, 255, 255, 0.4);
+        align-items: center;
+        justify-content: space-between;
+      }
+      li:hover .delete-button {
+        visibility: visible;
+      }
+      li span {
+        margin-right: auto;
+      }
+      .strikeThrough {
+        text-decoration: line-through;
+      }
     </style>
     <script>
-        console.log('Hello there!')
+      console.log("Hello there!");
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Welcome to TODO app</h1>
+      <h1>Welcome to TODO app</h1>
+      <!--html comment--->
     </header>
     <main>
-        <form onsubmit="addToDo(event)">
-            <input type="text" name="title" placeholder="Enter title"/>
-            <button>Add</button>
-        </form>
-        <div id="todoList">No todos to display</div>
+      <form onsubmit="addToDo(event)">
+        <input
+          type="text"
+          name="title"
+          placeholder="Enter title"
+          onkeyup="handleKeyUp(event)"
+          onkeypress="handleKeyPress(event)"
+          onchange="handleOnChange(event)"
+        />
+        <button id="Add">Add</button>
+      </form>
+      <div id="todoList">No todos to display</div>
     </main>
     <footer>
-        <p>&copy; 2024</p>
+      <p>&copy; 2025</p>
     </footer>
     <script src="client.js"></script>
-</body>
+  </body>
 </html>
